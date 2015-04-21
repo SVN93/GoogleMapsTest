@@ -1,22 +1,62 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VHf-lH-9xt" userLabel="GoogleMap" customClass="GMSMapView">
+                                <rect key="frame" x="16" y="100" width="343" height="467"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sydney" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOm-AM-dY5">
+                                <rect key="frame" x="158" y="38" width="58" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VHf-lH-9xt" firstAttribute="top" secondItem="EOm-AM-dY5" secondAttribute="bottom" constant="51" id="2RU-iU-cRa"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="VHf-lH-9xt" secondAttribute="bottom" constant="100" id="PrQ-BR-nXG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VHf-lH-9xt" secondAttribute="trailing" id="Qwp-cZ-b7J"/>
+                            <constraint firstItem="EOm-AM-dY5" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="RIx-Gd-qc5"/>
+                            <constraint firstAttribute="centerX" secondItem="EOm-AM-dY5" secondAttribute="centerX" id="UVf-62-t6M"/>
+                            <constraint firstItem="VHf-lH-9xt" firstAttribute="top" secondItem="EOm-AM-dY5" secondAttribute="bottom" constant="41" id="VjZ-lv-KH1"/>
+                            <constraint firstAttribute="centerX" secondItem="EOm-AM-dY5" secondAttribute="centerX" constant="-7.5" id="cK3-cL-vhh"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="VHf-lH-9xt" secondAttribute="bottom" constant="100" id="giW-8i-mrM"/>
+                            <constraint firstItem="VHf-lH-9xt" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="100" id="ldw-sK-HCa"/>
+                            <constraint firstItem="EOm-AM-dY5" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="18" id="lsz-Ky-Fe5"/>
+                            <constraint firstItem="VHf-lH-9xt" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="ney-X7-UWn"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2RU-iU-cRa"/>
+                                <exclude reference="ldw-sK-HCa"/>
+                                <exclude reference="RIx-Gd-qc5"/>
+                                <exclude reference="cK3-cL-vhh"/>
+                                <exclude reference="giW-8i-mrM"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="googleMapView" destination="VHf-lH-9xt" id="vdX-To-gXx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
