@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		864DBF441AE6AF3400DD7750 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 864DBF431AE6AF3400DD7750 /* main.m */; };
 		864DBF471AE6AF3400DD7750 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 864DBF461AE6AF3400DD7750 /* AppDelegate.m */; };
-		864DBF4A1AE6AF3400DD7750 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 864DBF491AE6AF3400DD7750 /* ViewController.m */; };
+		864DBF4A1AE6AF3400DD7750 /* SVNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 864DBF491AE6AF3400DD7750 /* SVNViewController.m */; };
 		864DBF4D1AE6AF3400DD7750 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 864DBF4B1AE6AF3400DD7750 /* Main.storyboard */; };
 		864DBF4F1AE6AF3400DD7750 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 864DBF4E1AE6AF3400DD7750 /* Images.xcassets */; };
 		864DBF521AE6AF3400DD7750 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 864DBF501AE6AF3400DD7750 /* LaunchScreen.xib */; };
@@ -45,8 +45,8 @@
 		864DBF431AE6AF3400DD7750 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		864DBF451AE6AF3400DD7750 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		864DBF461AE6AF3400DD7750 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		864DBF481AE6AF3400DD7750 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		864DBF491AE6AF3400DD7750 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		864DBF481AE6AF3400DD7750 /* SVNViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVNViewController.h; sourceTree = "<group>"; };
+		864DBF491AE6AF3400DD7750 /* SVNViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVNViewController.m; sourceTree = "<group>"; };
 		864DBF4C1AE6AF3400DD7750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		864DBF4E1AE6AF3400DD7750 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = GoogleMapsTest/Images.xcassets; sourceTree = "<group>"; };
 		864DBF511AE6AF3400DD7750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -65,8 +65,6 @@
 		864DBF7A1AE6B04500DD7750 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		864DBF7C1AE6B05800DD7750 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		864DBF7E1AE6B08800DD7750 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
-		864DBF801AE6B82300DD7750 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
-		864DBF811AE6B82300DD7750 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		864DBF861AE6BC9100DD7750 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,8 +197,8 @@
 		864DBF841AE6B8C200DD7750 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				864DBF481AE6AF3400DD7750 /* ViewController.h */,
-				864DBF491AE6AF3400DD7750 /* ViewController.m */,
+				864DBF481AE6AF3400DD7750 /* SVNViewController.h */,
+				864DBF491AE6AF3400DD7750 /* SVNViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -313,7 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				864DBF4A1AE6AF3400DD7750 /* ViewController.m in Sources */,
+				864DBF4A1AE6AF3400DD7750 /* SVNViewController.m in Sources */,
 				864DBF471AE6AF3400DD7750 /* AppDelegate.m in Sources */,
 				864DBF441AE6AF3400DD7750 /* main.m in Sources */,
 			);
@@ -342,7 +340,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				864DBF4C1AE6AF3400DD7750 /* Base */,
-				864DBF801AE6B82300DD7750 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -351,7 +348,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				864DBF511AE6AF3400DD7750 /* Base */,
-				864DBF811AE6B82300DD7750 /* ru */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -527,6 +523,7 @@
 				864DBF631AE6AF3500DD7750 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		864DBF641AE6AF3500DD7750 /* Build configuration list for PBXNativeTarget "GoogleMapsTestTests" */ = {
 			isa = XCConfigurationList;
@@ -535,6 +532,7 @@
 				864DBF661AE6AF3500DD7750 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

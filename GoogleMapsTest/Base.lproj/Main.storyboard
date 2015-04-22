@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="SVNViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -18,37 +18,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Fn-fA-sbb">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="vtu-kd-cyi"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                            </searchBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VHf-lH-9xt" userLabel="GoogleMap" customClass="GMSMapView">
-                                <rect key="frame" x="16" y="100" width="343" height="467"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sydney" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOm-AM-dY5">
-                                <rect key="frame" x="158" y="38" width="58" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqy-m6-Ch3">
+                                <rect key="frame" x="279" y="617" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="J4U-aX-EC0"/>
+                                    <constraint firstAttribute="height" constant="30" id="pYa-9u-8N5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="My location">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="returnToMyLocationButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="We1-0Z-eYs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="VHf-lH-9xt" firstAttribute="top" secondItem="EOm-AM-dY5" secondAttribute="bottom" constant="51" id="2RU-iU-cRa"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="VHf-lH-9xt" secondAttribute="bottom" constant="100" id="PrQ-BR-nXG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8Fn-fA-sbb" secondAttribute="trailing" constant="-16" id="AGx-r0-jml"/>
+                            <constraint firstItem="VHf-lH-9xt" firstAttribute="trailing" secondItem="8Fn-fA-sbb" secondAttribute="trailing" id="AIK-vS-E8x"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VHf-lH-9xt" secondAttribute="trailing" constant="-16" id="DWi-Wd-e2l"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="gqy-m6-Ch3" secondAttribute="bottom" constant="20" id="EYI-71-fai"/>
+                            <constraint firstItem="gqy-m6-Ch3" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="Kzk-Bn-X0o"/>
+                            <constraint firstItem="VHf-lH-9xt" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="MCk-Gu-TIs"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="VHf-lH-9xt" secondAttribute="bottom" id="PrQ-BR-nXG"/>
+                            <constraint firstItem="8Fn-fA-sbb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="Qpe-Ed-Umj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VHf-lH-9xt" secondAttribute="trailing" id="Qwp-cZ-b7J"/>
-                            <constraint firstItem="EOm-AM-dY5" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="RIx-Gd-qc5"/>
-                            <constraint firstAttribute="centerX" secondItem="EOm-AM-dY5" secondAttribute="centerX" id="UVf-62-t6M"/>
-                            <constraint firstItem="VHf-lH-9xt" firstAttribute="top" secondItem="EOm-AM-dY5" secondAttribute="bottom" constant="41" id="VjZ-lv-KH1"/>
-                            <constraint firstAttribute="centerX" secondItem="EOm-AM-dY5" secondAttribute="centerX" constant="-7.5" id="cK3-cL-vhh"/>
+                            <constraint firstItem="VHf-lH-9xt" firstAttribute="leading" secondItem="8Fn-fA-sbb" secondAttribute="leading" id="Svh-PU-kPF"/>
+                            <constraint firstItem="VHf-lH-9xt" firstAttribute="top" secondItem="8Fn-fA-sbb" secondAttribute="bottom" id="WoO-6O-3BD"/>
+                            <constraint firstItem="8Fn-fA-sbb" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="ecN-d9-q7G"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="VHf-lH-9xt" secondAttribute="bottom" constant="100" id="giW-8i-mrM"/>
+                            <constraint firstAttribute="centerX" secondItem="VHf-lH-9xt" secondAttribute="centerX" id="iQF-tB-k6r"/>
                             <constraint firstItem="VHf-lH-9xt" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="100" id="ldw-sK-HCa"/>
-                            <constraint firstItem="EOm-AM-dY5" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="18" id="lsz-Ky-Fe5"/>
                             <constraint firstItem="VHf-lH-9xt" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="ney-X7-UWn"/>
+                            <constraint firstItem="VHf-lH-9xt" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="uJ8-1G-8IL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8Fn-fA-sbb" secondAttribute="trailing" constant="-16" id="y4u-G9-eXE"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="2RU-iU-cRa"/>
+                                <exclude reference="y4u-G9-eXE"/>
+                                <exclude reference="AIK-vS-E8x"/>
+                                <exclude reference="MCk-Gu-TIs"/>
+                                <exclude reference="Qwp-cZ-b7J"/>
+                                <exclude reference="Svh-PU-kPF"/>
+                                <exclude reference="iQF-tB-k6r"/>
                                 <exclude reference="ldw-sK-HCa"/>
-                                <exclude reference="RIx-Gd-qc5"/>
-                                <exclude reference="cK3-cL-vhh"/>
+                                <exclude reference="ney-X7-UWn"/>
                                 <exclude reference="giW-8i-mrM"/>
                             </mask>
                         </variation>
@@ -56,6 +82,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="googleMapView" destination="VHf-lH-9xt" id="vdX-To-gXx"/>
+                        <outlet property="returnToMyLocationButton" destination="gqy-m6-Ch3" id="uoc-eb-NWj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
