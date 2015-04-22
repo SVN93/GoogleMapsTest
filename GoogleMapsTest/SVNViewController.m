@@ -11,9 +11,10 @@
 #import <GoogleMaps/GoogleMaps.h>
 
 @interface SVNViewController () <CLLocationManagerDelegate>
+// Outlets
 @property (weak, nonatomic) IBOutlet GMSMapView *googleMapView;
 @property (weak, nonatomic) IBOutlet UIButton *returnToMyLocationButton;
-
+// My objects
 @property (nonatomic) CLLocationManager *locationManager;
 @property (nonatomic) CLLocation *currentLocation;
 @end
