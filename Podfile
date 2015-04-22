@@ -1,5 +1,10 @@
-platform :ios, ‘7.0’
-pod "AFNetworking"
-pod "JSONKit"
+platform :ios, '7.0'
 
+target 'GoogleMapsTest' do
+
+end
+
+target 'GoogleMapsTestTests' do
+  pod 'AFNetworking'
+end
 
